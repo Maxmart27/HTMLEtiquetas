@@ -38,10 +38,11 @@ header {
 }
 
 header img {
-    width: 400px;
+    max-width: 500px;
     height: auto;
     object-fit: contain;
     background-color:#ecf0f1;
+    
 }
 
 nav {
@@ -88,6 +89,12 @@ img {
     border-radius: 10px;
     height: auto;
     display: block;
+}
+
+main img{
+    max-width: 500px;
+    object-fit: cover;
+    margin: 20px auto;
 }
 
 img:not(header img){
@@ -151,7 +158,7 @@ footer p {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
     header {
         flex-direction: column;
         padding: 15px;
@@ -184,29 +191,47 @@ footer p {
     main {
         padding: 20px 15px;
     }
+    
+    main img{
+        max-width: 90%;
+    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     header {
         flex-direction: column;
-        padding: 10px;
+        padding: 8px 10px;
     }
 
     header img {
-        width: 60px;
+        width: 50%;
+        height: auto;
     }
 
     nav {
         flex-direction: column;
         width: 100%;
-        gap: 8px;
+        gap: 6px;
+        align-items: center;
+        margin-top: 6px;
+    }
+
+    nav li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     nav a {
-        width: 100%;
-        text-align: center;
-        padding: 10px 15px;
-        font-size: 0.9rem;
+        width: auto;
+        padding: 6px 10px;
+        font-size: 0.82rem;
+        border-radius: 6px;
+        line-height: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        max-height: 20px; 
     }
 
     h1, h2, h3 {
@@ -218,8 +243,10 @@ footer p {
     }
 
     li {
-        padding: 12px;
-        margin-bottom: 15px;
+        max-height: 30px;
+        align-content: center;
+        padding: 10px;
+        margin-bottom: 12px;
     }
 
     iframe {
@@ -230,6 +257,10 @@ footer p {
 
     main {
         padding: 15px 10px;
+    }
+
+    main img{
+        max-width: 80%;
     }
 
     footer {
